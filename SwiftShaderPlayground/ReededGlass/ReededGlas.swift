@@ -52,15 +52,20 @@ Glaziers also use single-purpose pliers such as breaking pliers, with two flat j
                         .resizable()
                         .scaledToFill()
                         .frame(width: 100, height: 100, alignment: .center)
-                        .distortionEffect(colorShiftShader, maxSampleOffset: CGSize(width: 100, height: 100))
+                        .distortionEffect(colorShiftShader, maxSampleOffset: CGSize(width: 50, height: 50))
                 }
+                // .overlay(alignment: .top) {
+                //     Rectangle()
+                //         .fill(.ultraThinMaterial)
+                //         .frame(height: 100)
+                //         .opacity(0.8)
+                // }
             }
             .padding(.horizontal)
 
 
             ControlForm(value1: $spread, value2: $amplitude)
         }
-
     }
 
     var colorShiftShader: Shader {
@@ -107,7 +112,7 @@ fileprivate struct ControlForm: View {
         Slider(
             value: $value2, in: -100...100) {
                 Text("Angle")
-            } minimumValueLabel: {
+        } minimumValueLabel: {
                 Image(
                     systemName: "arrow.clockwise")
             } maximumValueLabel: {

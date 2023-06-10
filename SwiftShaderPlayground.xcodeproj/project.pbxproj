@@ -17,6 +17,9 @@
 		8A18B6B42A32101000DEB6BE /* SineDistortion.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8A18B6B32A32101000DEB6BE /* SineDistortion.metal */; };
 		8A18B6BC2A321E1600DEB6BE /* ReededGlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18B6B72A321C0B00DEB6BE /* ReededGlas.swift */; };
 		8A18B6BD2A321E1800DEB6BE /* ColorShift.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8A18B6B62A321C0B00DEB6BE /* ColorShift.metal */; };
+		8A18B6BF2A32213600DEB6BE /* DragAndDropSineDistortion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18B6BE2A32213600DEB6BE /* DragAndDropSineDistortion.swift */; };
+		8A18B6C22A32216500DEB6BE /* ViewToAppIconSet in Frameworks */ = {isa = PBXBuildFile; productRef = 8A18B6C12A32216500DEB6BE /* ViewToAppIconSet */; };
+		8A18B6C52A3230C500DEB6BE /* DragAndDropSineDistortion.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8A18B6C42A3230C500DEB6BE /* DragAndDropSineDistortion.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,8 @@
 		8A18B6B32A32101000DEB6BE /* SineDistortion.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = SineDistortion.metal; sourceTree = "<group>"; };
 		8A18B6B62A321C0B00DEB6BE /* ColorShift.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ColorShift.metal; sourceTree = "<group>"; };
 		8A18B6B72A321C0B00DEB6BE /* ReededGlas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReededGlas.swift; sourceTree = "<group>"; };
+		8A18B6BE2A32213600DEB6BE /* DragAndDropSineDistortion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropSineDistortion.swift; sourceTree = "<group>"; };
+		8A18B6C42A3230C500DEB6BE /* DragAndDropSineDistortion.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DragAndDropSineDistortion.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A18B6C22A32216500DEB6BE /* ViewToAppIconSet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,7 @@
 		8A18B6982A31FB9000DEB6BE /* SwiftShaderPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				8A18B6C32A3230BC00DEB6BE /* DragAndDropSineDistortion */,
 				8A18B6AE2A31FCF300DEB6BE /* SineDistortion */,
 				8A18B6B52A321C0B00DEB6BE /* ReededGlass */,
 				8A18B6A92A31FBF800DEB6BE /* AngledFill */,
@@ -113,6 +120,15 @@
 			path = ReededGlass;
 			sourceTree = "<group>";
 		};
+		8A18B6C32A3230BC00DEB6BE /* DragAndDropSineDistortion */ = {
+			isa = PBXGroup;
+			children = (
+				8A18B6C42A3230C500DEB6BE /* DragAndDropSineDistortion.metal */,
+				8A18B6BE2A32213600DEB6BE /* DragAndDropSineDistortion.swift */,
+			);
+			path = DragAndDropSineDistortion;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,6 +145,9 @@
 			dependencies = (
 			);
 			name = SwiftShaderPlayground;
+			packageProductDependencies = (
+				8A18B6C12A32216500DEB6BE /* ViewToAppIconSet */,
+			);
 			productName = SwiftShaderPlayground;
 			productReference = 8A18B6962A31FB9000DEB6BE /* SwiftShaderPlayground.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +176,9 @@
 				Base,
 			);
 			mainGroup = 8A18B68D2A31FB9000DEB6BE;
+			packageReferences = (
+				8A18B6C02A32216500DEB6BE /* XCRemoteSwiftPackageReference "ViewToAppIconSet" */,
+			);
 			productRefGroup = 8A18B6972A31FB9000DEB6BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,9 +207,11 @@
 			files = (
 				8A18B6B42A32101000DEB6BE /* SineDistortion.metal in Sources */,
 				8A18B69C2A31FB9000DEB6BE /* ContentView.swift in Sources */,
+				8A18B6C52A3230C500DEB6BE /* DragAndDropSineDistortion.metal in Sources */,
 				8A18B6AD2A31FC1D00DEB6BE /* AngledFill.swift in Sources */,
 				8A18B6B02A31FD2000DEB6BE /* SineDistortion.swift in Sources */,
 				8A18B6BC2A321E1600DEB6BE /* ReededGlas.swift in Sources */,
+				8A18B6BF2A32213600DEB6BE /* DragAndDropSineDistortion.swift in Sources */,
 				8A18B69A2A31FB9000DEB6BE /* SwiftShaderPlaygroundApp.swift in Sources */,
 				8A18B6BD2A321E1800DEB6BE /* ColorShift.metal in Sources */,
 				8A18B6AB2A31FC0A00DEB6BE /* AngledFill.metal in Sources */,
@@ -409,6 +433,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8A18B6C02A32216500DEB6BE /* XCRemoteSwiftPackageReference "ViewToAppIconSet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:StefKors/ViewToAppIconSet.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8A18B6C12A32216500DEB6BE /* ViewToAppIconSet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A18B6C02A32216500DEB6BE /* XCRemoteSwiftPackageReference "ViewToAppIconSet" */;
+			productName = ViewToAppIconSet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8A18B68E2A31FB9000DEB6BE /* Project object */;
 }
